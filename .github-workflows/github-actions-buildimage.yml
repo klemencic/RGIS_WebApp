@@ -18,7 +18,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        IMAGE_NAME=vigorous_benz/rgis-webapp
+        IMAGE_NAME=RGIS_WebApp/rgis-webapp
         COMMIT_HASH=$(echo $GITHUB_SHA | cut -c1-7)
         
         docker build -t $IMAGE_NAME:latest -t $IMAGE_NAME:$COMMIT_HASH .
