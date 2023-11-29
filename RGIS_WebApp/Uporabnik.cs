@@ -13,6 +13,6 @@ namespace ClassDiagramCODScout {
 
 	public class random
 	{
-
+		string a;
 	}
 }
