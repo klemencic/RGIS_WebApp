@@ -5,7 +5,7 @@ namespace ClassDiagramCODScout {
 		public void GetTranscationData() {
 			throw new System.NotImplementedException("Not implemented");
 		}
-		public void AuthorizePla?ilo() {
+		public void AuthorizePlacilo() {
 			throw new System.NotImplementedException("Not implemented");
 		}
 
