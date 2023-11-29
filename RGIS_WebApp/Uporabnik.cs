@@ -11,4 +11,8 @@ namespace ClassDiagramCODScout {
 
 	}
 
+	public class random
+	{
+
+	}
 }
