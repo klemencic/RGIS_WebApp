@@ -28,5 +28,6 @@ jobs:
           context: .
           file: ./RGIS_WebApp/Dockerfile
           push: true
-          tags: 
+          tags: |
              matejkl/rgis-webapp:latest
+             matejkl/rgis-webapp:${{ github.sha }}
