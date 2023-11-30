@@ -19,10 +19,7 @@ namespace ClassDiagramCODScout {
 		string d;
 		string e;
 		string f;
-		string g;
-		string h;
-		string i;
-		string j;
+		s
 	
 	}
 }
