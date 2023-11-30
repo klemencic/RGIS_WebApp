@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 
 # Copy only the .csproj file first to optimize the build caching
-COPY ["RGIS_WebApp.csproj", "./"]
+COPY ["RGIS_WebApp/RGIS_WebApp.csproj", "./"]
 RUN dotnet restore "RGIS_WebApp.csproj"
 
 # Copy the entire project files
