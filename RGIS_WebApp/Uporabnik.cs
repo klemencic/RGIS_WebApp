@@ -16,5 +16,6 @@ namespace ClassDiagramCODScout {
 		string a;
 		string b;
 		string c;
+		string d;
 	}
 }
