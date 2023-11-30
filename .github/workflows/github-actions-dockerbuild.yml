@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
@@ -22,10 +22,11 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v2.7.0
         with:
           context: .
-          file: C:\Users\MATEJ\source\repos\RGIS_WebApp\RGIS_WebApp
+          file: ./RGIS_WebApp/Dockerfile
           push: true
           tags: 
            matejkl/rgis-webapp:latest
+           matejkl/rgis-webapp:${{ github.sha }}
