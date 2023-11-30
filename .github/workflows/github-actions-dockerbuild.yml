@@ -31,4 +31,3 @@ jobs:
           tags: |
             matejkl/rgis-webapp:latest
             matejkl/rgis-webapp:${{ github.sha }}
-               
