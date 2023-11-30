@@ -14,7 +14,7 @@ namespace ClassDiagramCODScout {
 	public class random
 	{
 		string a;
-		string b;
+	
 		
 		
 		
