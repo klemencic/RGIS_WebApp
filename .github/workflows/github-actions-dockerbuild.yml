@@ -1,4 +1,3 @@
-name: Build and Push Docker Image
 
 on:
   push:
@@ -6,11 +5,11 @@ on:
       - main
 
 jobs:
-  build-and-push:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Set up Docker Buildx
@@ -29,5 +28,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            matejkl/rgis-webapp:latest
-            matejkl/rgis-webapp:${{ github.sha }}
+           matejkl/rgis-webapp:latest
