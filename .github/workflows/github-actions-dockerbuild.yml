@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: C:\Users\MATEJ\source\repos\RGIS_WebApp\RGIS_WebApp
+          file: .Dockerfile/
           push: true
           tags: 
            matejkl/rgis-webapp:latest
