@@ -29,3 +29,4 @@ jobs:
           push: true
           tags: 
            matejkl/rgis-webapp:latest
+           matejkl/rgis-webapp:${{ github.sha }}
