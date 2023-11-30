@@ -5,9 +5,15 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["RGIS_WebApp.csproj", "./"]
-RUN dotnet restore "RGIS_WebApp.csproj"
+
+# Copy the .csproj file separately to optimize the build caching
+COPY ["RGIS_WebApp.csproj", "RGIS_WebApp/"]
+RUN dotnet restore "RGIS_WebApp/RGIS_WebApp.csproj"
+
+# Copy the entire project files
 COPY . .
+
+WORKDIR "/src/RGIS_WebApp"
 RUN dotnet build "RGIS_WebApp.csproj" -c Release -o /app/build
 
 FROM build AS publish
