@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGIS_WebApp", "RGIS_WebApp\RGIS_WebApp.csproj", "{FCA53508-13F4-450D-B248-896B32DE1D76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RGIS_WebApp", "RGIS_WebApp\RGIS_WebApp.csproj", "{FCA53508-13F4-450D-B248-896B32DE1D76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

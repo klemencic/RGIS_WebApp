@@ -1,7 +1,6 @@
 using System;
 
-namespace ClassDiagramCODScout
-{
+namespace ClassDiagramCODScout{
 	public class CustomGame
 	{
 
