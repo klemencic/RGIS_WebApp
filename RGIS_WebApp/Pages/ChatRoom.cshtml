@@ -2,3 +2,65 @@
 @model RGIS_WebApp.Pages.ChatRoomModel
 @{
 }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .chat-window {
+        width: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .chat-header {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .chat-message {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+        .chat-message strong {
+            color: #333;
+        }
+
+    .chat-input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .send-button {
+        width: 100%;
+        padding: 10px;
+        background-color: blue;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <div class="chat-window">
+        <div class="chat-header">
+            <strong>Welcome,</strong>
+        </div>
+        <div class="chat-message">
+            <strong>Matej</strong>: Wanna play a few games?
+        </div>
+        <div class="chat-message">
+            <strong>Mark</strong>: Sure, in a minute.
+        </div>
+        
+        </div>
+        <input type="text" class="chat-input" placeholder="Type your message here...">
+        <button class="send-button">Send</button>
+    
+
+</body>
