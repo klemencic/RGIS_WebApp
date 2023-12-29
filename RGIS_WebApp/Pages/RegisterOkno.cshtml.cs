@@ -28,13 +28,22 @@ namespace RGIS_WebApp.Pages
         {
             if (ModelState.IsValid)
             {
-              Database database = new Database();
-              Uporabnik uporabnik = new Uporabnik();
+                Database database = new Database();
+
+                Uporabnik uporabnik = new Uporabnik();
               uporabnik.Username = Username;
               uporabnik.Geslo = Password;
                 uporabnik.Email = Email;
                 uporabnik.IsModerator = false;
                 uporabnik.IsPremium = false;
+
+                if (!database.ObjectExists(Username)){
+
+                    database.UporabnikDB.Add(uporabnik);
+                    database.SaveChanges();
+                    return RedirectToPage("/Index");
+                }
+                else { throw new Exception("Uporabnik že obstaja!"); }
             }
 
             return Page();

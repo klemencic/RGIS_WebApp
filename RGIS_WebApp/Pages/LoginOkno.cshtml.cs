@@ -1,3 +1,4 @@
+using ClassDiagramCODScout;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -21,8 +22,15 @@ namespace RGIS_WebApp.Pages
         {
             if (ModelState.IsValid)
             {
-                System.Console.WriteLine($"Username: {Username}, Password: {Password}");
-                return RedirectToPage("/Index");
+                Database db = new Database();
+                Uporabnik uporabnik = new Uporabnik();
+                uporabnik.Username = Username;
+                uporabnik.Geslo = Password;
+
+                if(db.ObjectExists(Username) && db.PasswordMatch(Password))
+                {
+
+                }
             }
 
             return Page();
