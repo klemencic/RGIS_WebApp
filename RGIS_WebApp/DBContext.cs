@@ -8,7 +8,7 @@ namespace RGIS_WebApp
     public class Database : DbContext
     {
         
-            string path = @"C:\Users\MATEJ\source\repos\RGIS_WebApp\RGIS_WebApp\Database";
+            string path = @".\RGIS_WebApp\RGIS_WebApp\Database";
             public Database() { }
             public DbSet<Uporabnik> UporabnikDB { get; set; }
             public DbSet<Stats> PremiumUporabnikDB { get; set; }
