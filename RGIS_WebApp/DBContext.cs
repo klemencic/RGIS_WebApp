@@ -11,7 +11,7 @@ namespace RGIS_WebApp
             string path = @"C:\Users\MATEJ\source\repos\RGIS_WebApp\RGIS_WebApp\Database";
             public Database() { }
             public DbSet<Uporabnik> UporabnikDB { get; set; }
-            public DbSet<PremiumUporabnik> PremiumUporabnikDB { get; set; }
+            public DbSet<Stats> PremiumUporabnikDB { get; set; }
             public DbSet<Moderator> ModeratorDB { get; set; }
 
 
