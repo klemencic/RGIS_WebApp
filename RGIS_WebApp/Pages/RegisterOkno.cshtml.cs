@@ -28,8 +28,13 @@ namespace RGIS_WebApp.Pages
         {
             if (ModelState.IsValid)
             {
-                System.Console.WriteLine($"Username: {Username}, Password: {Password}");
-                Uporabnik uporabnik = new Uporabnik(Username, Password, Email);
+              Database database = new Database();
+              Uporabnik uporabnik = new Uporabnik();
+              uporabnik.Username = Username;
+              uporabnik.Geslo = Password;
+                uporabnik.Email = Email;
+                uporabnik.IsModerator = false;
+                uporabnik.IsPremium = false;
             }
 
             return Page();

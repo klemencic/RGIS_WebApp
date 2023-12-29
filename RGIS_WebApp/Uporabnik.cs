@@ -2,6 +2,7 @@ using System;
 
 namespace ClassDiagramCODScout {
 	public class Uporabnik {
+        public int Id { get; set; }
 		private string _username;
         public string Username
         {
@@ -24,12 +25,17 @@ namespace ClassDiagramCODScout {
             set { _geslo = value; }
 
         }
+        public bool IsPremium { get; set; }
+        public bool IsModerator { get; set; }
 
-		public Uporabnik(string username, string email, string geslo)
+		public Uporabnik(string username, string email, string geslo, bool isPremium, bool isModerator)
 		{
-            Username = Username;
+            
+            Username = username;
             Email = email;
             Geslo = geslo;
+            IsPremium = isPremium;
+            IsModerator = isModerator;
         }
 
         public Uporabnik() { }

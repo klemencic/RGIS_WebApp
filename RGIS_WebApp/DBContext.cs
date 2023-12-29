@@ -8,11 +8,10 @@ namespace RGIS_WebApp
     public class Database : DbContext
     {
         
-            string path = @".\RGIS_WebApp\RGIS_WebApp\Database";
+            string path = "Database.db";
             public Database() { }
             public DbSet<Uporabnik> UporabnikDB { get; set; }
-            public DbSet<Stats> PremiumUporabnikDB { get; set; }
-            public DbSet<Moderator> ModeratorDB { get; set; }
+            public DbSet<Stats> StatsDB { get; set; }
 
 
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
