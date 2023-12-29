@@ -11,14 +11,14 @@ namespace RGIS_WebApp
             string path = "Database.db";
             public Database() { }
             public DbSet<Uporabnik> UporabnikDB { get; set; }
-            public DbSet<Stats> StatsDB { get; set; }
 
 
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
-                optionsBuilder.UseSqlite($"Data source={path}");
+                optionsBuilder.UseSqlite($"Data source={path}");    
             }
 
+           
 
             public bool ObjectExists(string usernameToCheck)
             {

@@ -1,3 +1,4 @@
+using RGIS_WebApp;
 using System;
 
 namespace ClassDiagramCODScout {
@@ -27,15 +28,30 @@ namespace ClassDiagramCODScout {
         }
         public bool IsPremium { get; set; }
         public bool IsModerator { get; set; }
+        public int Kills { get; set; }
+        public int Deaths { get; set; }
+        public int Assists  { get; set; }
 
-		public Uporabnik(string username, string email, string geslo, bool isPremium, bool isModerator)
-		{
-            
+        public int Wins { get; set; }
+        public int Losses { get; set; }
+        public int Matches { get; set; }
+        public double KDR { get; set; }
+
+		public Uporabnik(string username,  string email, string geslo, bool isPremium, bool isModerator, int kills, int deaths, int assists, int wins, int losses, int matches, double kDR)
+        {
+
             Username = username;
             Email = email;
             Geslo = geslo;
             IsPremium = isPremium;
             IsModerator = isModerator;
+            Kills = kills;
+            Deaths = deaths;
+            Assists = assists;
+            Wins = wins;
+            Losses = losses;
+            Matches = matches;
+            KDR = kDR;
         }
 
         public Uporabnik() { }

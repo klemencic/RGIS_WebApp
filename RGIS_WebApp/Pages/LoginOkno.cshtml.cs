@@ -1,7 +1,8 @@
 using ClassDiagramCODScout;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace RGIS_WebApp.Pages
 {
@@ -13,26 +14,30 @@ namespace RGIS_WebApp.Pages
         [BindProperty]
         public string Password { get; set; }
 
-        
-        public void OnGet()
-        {
-        }
-
         public IActionResult OnPostLogin()
         {
             if (ModelState.IsValid)
             {
                 Database db = new Database();
-                Uporabnik uporabnik = new Uporabnik();
-                uporabnik.Username = Username;
-                uporabnik.Geslo = Password;
-
-                if(db.ObjectExists(Username) && db.PasswordMatch(Password))
+                Uporabnik uporabnik = new Uporabnik
                 {
+                    Username = Username,
+                    Geslo = Password
+                };
 
+                if (db.ObjectExists(Username) && db.PasswordMatch(Password))
+                {
+                    uporabnik = db.UporabnikDB.FirstOrDefault(u => u.Username == Username);
+
+
+                    // Serialize Uporabnik object to JSON and store it in TempData
+                    TempData["ObjectData"] = JsonSerializer.Serialize(uporabnik);
+
+                    return RedirectToPage("/CurrentUser", new { area = "", username = uporabnik.Username });
                 }
             }
 
             return Page();
         }
-    }}
+    }
+}
