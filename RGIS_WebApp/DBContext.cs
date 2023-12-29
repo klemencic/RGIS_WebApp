@@ -19,12 +19,20 @@ namespace RGIS_WebApp
                 optionsBuilder.UseSqlite($"Data source={path}");
             }
 
-           
-            
+
+            public bool ObjectExists(string usernameToCheck)
+            {
+                return UporabnikDB.Any(u => u.Username == usernameToCheck);
+            }
+
+            public bool PasswordMatch(string password)
+        {
+            return UporabnikDB.Any(p => p.Geslo == password);
+        }
 
 
 
-        
+
     }
 }
 
