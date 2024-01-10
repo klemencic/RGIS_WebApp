@@ -2,6 +2,8 @@
 @model RGIS_WebApp.Pages.CurrentUserModel
 @{
 	 ViewData["Title"] = "CurrentUser";
+
+    
 }
 
   <h1>Welcome, @(Model.loggedUser?.Username ?? "Guest")!</h1>
@@ -9,3 +11,10 @@
     <p>Email: @(Model.loggedUser?.Email ?? "N/A")</p>
     <p>Is Premium: @(Model.loggedUser?.IsPremium ?? false)</p>
     <p>Is Moderator: @(Model.loggedUser?.IsModerator ?? false)</p>
+
+
+
+
+
+
+

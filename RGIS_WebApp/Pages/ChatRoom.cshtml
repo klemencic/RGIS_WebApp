@@ -51,16 +51,22 @@
         <div class="chat-header">
             <strong>Welcome,</strong>
         </div>
-        <div class="chat-message">
-            <strong>Matej</strong>: Wanna play a few games?
-        </div>
-        <div class="chat-message">
-            <strong>Mark</strong>: Sure, in a minute.
-        </div>
-        
-        </div>
-        <input type="text" class="chat-input" placeholder="Type your message here...">
+        @if (Model.Messages != null)
+        {
+            @foreach (var chatMessage in Model.Messages)
+            {
+                <div class="chat-message">
+                    <strong>@chatMessage.Sender</strong>: @chatMessage.Vsebina
+                </div>
+            }
+        }
+    </div>
+
+    <form method="post" asp-page-handler="Submit">
+        <input asp-for="vnos" type="text" class="chat-input" placeholder="Type your message here...">
         <button class="send-button">Send</button>
+    </form>
+        
     
 
 </body>

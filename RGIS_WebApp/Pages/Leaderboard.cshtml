@@ -3,8 +3,9 @@
 @{
     ViewData["Title"] = "Leaderboard";
 }
+<h1>Your stats</h1>
 
-<table class="table">
+<table class="table" asp-page-handler="Leaderboard">
     <thead>
         <tr>
             <th>Username</th>
@@ -12,7 +13,7 @@
             <th>Deaths</th>
             <th>Assists</th>
             <th>Wins</th>
-            <th>Loses</th>
+            <th>Losses</th>
             <th>Matches</th>
             <th>KDRatio</th>
         </tr>
@@ -20,19 +21,146 @@
     <tbody>
         
         <tr>
-            <td>Player123</td>
-            <td>120</td>
-            <td>40</td>
-            <td>60</td>
-            <td>80</td>
-            <td>20</td>
-            <td>100</td>
-            <td>3.0</td>
+            @if(Model.loggedUser != null)
+            {
+                <td>@Model.loggedUser.Username</td>
+                <td>@Model.loggedUser.Kills</td>
+                <td>@Model.loggedUser.Deaths</td>
+                <td>@Model.loggedUser.Assists</td>
+                <td>@Model.loggedUser.Wins</td>
+                <td>@Model.loggedUser.Losses</td>
+                <td>@Model.loggedUser.Matches</td>
+                <td>@Model.loggedUser.KDR</td>
+                
+            }
         </tr>
         
     
     </tbody>
 </table>
+
+<h1>Top 10</h1>
+
+<table class="table" asp-page-handler="Leaderboard">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Kills</th>
+            <th>Deaths</th>
+            <th>Assists</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Matches</th>
+            <th>KDRatio</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>user1</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>user2</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>user3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>user4</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>user5</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>user6</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>user7</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>user8</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>user9</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>user10</td>
+            <td>10</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>5</td>
+            <td>15</td>  
+            <td>2.0</td>
+        </tr>
+    </tbody>
+</table>
+            
+
+
 
 
 
