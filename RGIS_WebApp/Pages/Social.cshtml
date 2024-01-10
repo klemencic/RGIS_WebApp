@@ -1,8 +1,55 @@
 ﻿@page
 @model RGIS_WebApp.Pages.SocialModel
 @{
-ViewData["Title"] = "Social";
+    ViewData["Title"] = "Social";
 }
+
+<style>
+    body {
+        background-color: #141414; /* Set your desired background color */
+        font-family: Arial, sans-serif; /* Set your desired font family */
+    }
+
+    h1 {
+        color: white; /* Set your desired heading color */
+    }
+
+    table {
+        background-color: #fff; /* Set your desired table background color */
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd; /* Set your desired border color */
+        padding: 8px;
+        text-align: left;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    .chat-input {
+        padding: 8px;
+        width: 150px; /* Adjust the width as per your preference */
+    }
+
+    .send-button {
+        padding: 8px;
+        background-color: red; /* Set your desired button background color */
+        color: white; /* Set your desired button text color */
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .send-button:hover {
+            background-color: darkred; /* Set your desired button background color on hover */
+            transform: scale(1.1); /* Scale the button on hover */
+        }
+</style>
 
 <h1>Social</h1>
 
@@ -17,11 +64,12 @@ ViewData["Title"] = "Social";
             @foreach (var friend in Model.Friends)
             {
                 <td>@friend.Username</td>
-            }</tr>
+            }
+        </tr>
     </tbody>
 </table>
 
 <form method="post" asp-page-handler="AddFriend">
     <input asp-for="username" type="text" class="chat-input" placeholder="Enter friend name">
     <button class="send-button">Send</button>
-</form>>
+</form>

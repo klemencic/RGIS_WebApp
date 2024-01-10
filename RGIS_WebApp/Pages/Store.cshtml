@@ -1,18 +1,40 @@
 ﻿@page
 @model RGIS_WebApp.Pages.StoreModel
 @{
-ViewData["Title"] = "Store";
+    ViewData["Title"] = "Store";
 }
 
+<style>
+    body {
+        background-color:  #141414; /* Set your desired background color */
+        font-family: Arial, sans-serif; /* Set your desired font family */
+    }
+
+    h1 {
+        color: white; /* Set your desired heading color */
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50; /* Set your desired button background color */
+        color: white; /* Set your desired button text color */
+        border: none;
+        border-radius: 5px; /* Add rounded corners */
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        button:hover {
+            background-color: #45a049; /* Set your desired button background color on hover */
+        }
+</style>
+
 <h1>Store</h1>
-
-
-
 
 <form method="post">
     <button type="submit" asp-page-handler="Store">Buy Premium</button>
 </form>
-
-
-
-
