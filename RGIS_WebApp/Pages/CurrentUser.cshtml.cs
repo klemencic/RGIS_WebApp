@@ -33,6 +33,15 @@ namespace RGIS_WebApp.Pages
             return RedirectToPage("/Leaderboard", new { area = "", username = loggedUser.Username });
         }
 
+        public IActionResult OnPostOdjava()
+        {
+            loggedUser = null;
+            TempData.Remove("ObjectData");
+            TempData.Remove("CurrentUserData");
+
+            return Page();  
+        }
+
        
 
 

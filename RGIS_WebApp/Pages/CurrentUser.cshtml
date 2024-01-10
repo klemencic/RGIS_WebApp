@@ -24,7 +24,9 @@
     <p>Is Moderator: @(Model.loggedUser?.IsModerator ?? false)</p>
 
 
-
+    <form method="post" asp-page-handler="Odjava">
+        <button type="submit" class="btn btn-primary">Odjava</button>
+    </form>
 
 
 

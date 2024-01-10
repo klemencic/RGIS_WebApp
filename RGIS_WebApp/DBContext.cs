@@ -22,6 +22,7 @@ namespace RGIS_WebApp
 
             public bool ObjectExists(string usernameToCheck)
             {
+                
                 return UporabnikDB.Any(u => u.Username == usernameToCheck);
             }
 

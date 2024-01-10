@@ -37,6 +37,7 @@ namespace RGIS_WebApp.Pages
             }
 
             db.SaveChanges();
+            TempData.Clear();
 
             return RedirectToPage("/CurrentUser");
 

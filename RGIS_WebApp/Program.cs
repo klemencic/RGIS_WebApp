@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RGIS_WebApp;
 
@@ -27,3 +28,5 @@ app.UseAuthorization();
 app.MapRazorPages();
 
 app.Run();
+
+
