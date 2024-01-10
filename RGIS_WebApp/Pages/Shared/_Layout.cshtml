@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿
+@using Microsoft.AspNetCore.Identity
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,11 +10,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RGIS_WebApp.styles.css" asp-append-version="true" />
-
-   
-
-
-    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-o5z2Gs3B7OKb8tZ5l5u6gpfZrPbPJuQlv/YA+1fEFbbS4XzqZuL4Pv5Ez4ot0Vf4" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -29,9 +28,6 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Index</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/LoginOkno">Login</a>
                         </li>
                         <li class="nav-item">
@@ -44,8 +40,19 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/ChatRoom">ChatRoom</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CurrentUser">Current User</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/CurrentUser">Osebni podatki</a>
+                        </li
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Social">Social</a>
                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Store">Store</a>
+                        </li
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Premium">Premium</a>
+                        </li>
+                       
+                            
                     </ul>
                 </div>
             </div>
@@ -67,6 +74,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

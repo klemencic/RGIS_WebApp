@@ -1,0 +1,27 @@
+﻿@page
+@model RGIS_WebApp.Pages.SocialModel
+@{
+ViewData["Title"] = "Social";
+}
+
+<h1>Social</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var friend in Model.Friends)
+            {
+                <td>@friend.Username</td>
+            }</tr>
+    </tbody>
+</table>
+
+<form method="post" asp-page-handler="AddFriend">
+    <input asp-for="username" type="text" class="chat-input" placeholder="Enter friend name">
+    <button class="send-button">Send</button>
+</form>>
