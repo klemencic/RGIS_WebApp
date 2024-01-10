@@ -4,6 +4,35 @@
     ViewData["Title"] = "Leaderboard";
 }
 
+<style>
+    body {
+        background-color: #141414;
+        color: #fff;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        background-color: #333;
+        color: #fff;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        color: #fff; /* Set text color to white */
+    }
+
+    th {
+        background-color: #555;
+    }
+
+    tr:hover {
+        background-color: #555;
+    }
+</style>
+
 <table class="table">
     <thead>
         <tr>
@@ -14,11 +43,10 @@
             <th>Wins</th>
             <th>Loses</th>
             <th>Matches</th>
-            <th>KDRatio</th>
+            <th>KD Ratio</th>
         </tr>
     </thead>
     <tbody>
-        
         <tr>
             <td>Player123</td>
             <td>120</td>
@@ -29,10 +57,5 @@
             <td>100</td>
             <td>3.0</td>
         </tr>
-        
-    
     </tbody>
 </table>
-
-
-

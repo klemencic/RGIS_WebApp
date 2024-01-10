@@ -1,15 +1,23 @@
 ﻿@page
 @model RGIS_WebApp.Pages.ChatRoomModel
-@{
-}
+
 <style>
-    
+    body {
+        background-color: #141414;
+        margin: 0;
+        padding: 0;
+    }
 
     .chat-window {
         width: 300px;
         border: 1px solid #ccc;
-        padding: 10px;
+        padding: 20px;
         margin: 20px auto;
+        background-color: #fff;
+        text-align: center;
+        height: 300px;
+        box-sizing: border-box;
+        overflow-y: auto;
     }
 
     .chat-header {
@@ -19,8 +27,8 @@
     }
 
     .chat-message {
-        padding: 5px;
-        margin-bottom: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
     }
 
         .chat-message strong {
@@ -28,39 +36,45 @@
         }
 
     .chat-input {
-        width: 50%;
+        width: calc(100% - 20px);
         padding: 10px;
-        width: 300px;
-        margin-left: 230px;
+        margin: 0 auto 10px;
     }
 
     .send-button {
-        width: 300px;
+        width: calc(100% - 20px);
         padding: 10px;
-        background-color: blue;
+        background-color: red;
         border: none;
         color: white;
         cursor: pointer;
-        margin-left: 230px;
+        margin: 0 auto;
+        transition: transform 0.2s ease-in-out;
     }
+
+        .send-button:hover {
+            transform: scale(1.1);
+        }
 </style>
 
 <body>
-
     <div class="chat-window">
         <div class="chat-header">
             <strong>Welcome,</strong>
         </div>
         <div class="chat-message">
-            <strong>Matej</strong>: Wanna play a few games?
+            <strong>Matej</strong>: Hey, Mark! Want to catch up for a game later?
         </div>
         <div class="chat-message">
-            <strong>Mark</strong>: Sure, in a minute.
+            <strong>Mark</strong>: Sure, Matej! I'm up for it. What game do you have in mind?
         </div>
-        
+        <div class="chat-message">
+            <strong>Matej</strong>: How about some Call of Duty? It's been a while.
         </div>
-        <input type="text" class="chat-input" placeholder="Type your message here...">
-        <button class="send-button">Send</button>
-    
-
+        <div class="chat-message">
+            <strong>Mark</strong>: Sounds good! I'll be online around 7 PM. See you then!
+        </div>
+    </div>
+    <input type="text" class="chat-input" placeholder="Type your message here...">
+    <button class="send-button">Send</button>
 </body>

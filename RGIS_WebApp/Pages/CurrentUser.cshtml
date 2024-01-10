@@ -1,11 +1,22 @@
 ﻿@page
 @model RGIS_WebApp.Pages.CurrentUserModel
 @{
-	 ViewData["Title"] = "CurrentUser";
+    ViewData["Title"] = "CurrentUser";
 }
 
-  <h1>Welcome, @(Model.loggedUser?.Username ?? "Guest")!</h1>
+<style>
+    body {
+        background-color: #141414; /* Set the desired background color */
+        color: white; /* Set text color */
+    }
 
-    <p>Email: @(Model.loggedUser?.Email ?? "N/A")</p>
-    <p>Is Premium: @(Model.loggedUser?.IsPremium ?? false)</p>
-    <p>Is Moderator: @(Model.loggedUser?.IsModerator ?? false)</p>
+    h1, p {
+        margin: 20px; /* Add margin for better spacing */
+    }
+</style>
+
+<h1>Welcome, @(Model.loggedUser?.Username ?? "Guest")!</h1>
+
+<p>Email: @(Model.loggedUser?.Email ?? "N/A")</p>
+<p>Is Premium: @(Model.loggedUser?.IsPremium ?? false)</p>
+<p>Is Moderator: @(Model.loggedUser?.IsModerator ?? false)</p>
